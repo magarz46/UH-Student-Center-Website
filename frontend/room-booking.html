@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UH Sugar Land Student Center | Room Booking</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>UH Sugar Land Student Center</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a class="nav-tab" href="index.html">Home</a></li>
+          <li><a class="nav-tab" href="room-booking.html" current="page">Room Booking</a></li>
+          <li><a class="nav-tab" href="faq.html">FAQ</a></li>
+          <li><a class="nav-tab" href="contact.html">Contact</a></li>
+          <li><a class="nav-tab" href="references.html">References</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="outline-block">
+      <h2>Room Options</h2>
+      <div class="outline-grid room-options-grid">
+        <article class="room-card">
+          <h3>Fort Bend Study Room</h3>
+          <p>Capacity: 4 students</p>
+        </article>
+        <article class="room-card">
+          <h3>Bluebonnet Study Room</h3>
+          <p>Capacity: 6 students</p>
+        </article>
+        <article class="room-card">
+          <h3>Pecan Study Room</h3>
+          <p>Capacity: 8 students</p>
+        </article>
+        <article class="room-card">
+          <h3>Brazos Study Room</h3>
+          <p>Capacity: 12 students</p>
+        </article>
+        <article class="room-card">
+          <h3>Cougar Study Room</h3>
+          <p>Capacity: 20 students</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="outline-block">
+      <h2>Booking Form</h2>
+      <form id="roomBookingForm" class="booking-form" novalidate>
+        <div class="form-row">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="requestedRoom">Requested Room</label>
+          <select id="requestedRoom" name="requestedRoom" required>
+            <option value="">Select a room</option>
+            <option value="Fort Bend Study Room">Fort Bend Study Room</option>
+            <option value="Bluebonnet Study Room">Bluebonnet Study Room</option>
+            <option value="Pecan Study Room">Pecan Study Room</option>
+            <option value="Brazos Study Room">Brazos Study Room</option>
+            <option value="Cougar Study Room">Cougar Study Room</option>
+          </select>
+        </div>
+
+        <div class="form-row two-column">
+          <div>
+            <label for="bookingDate">Date</label>
+            <input id="bookingDate" name="bookingDate" type="date" required>
+          </div>
+          <div>
+            <label for="startTime">Start Time</label>
+            <input id="startTime" name="startTime" type="time" required>
+          </div>
+          <div>
+            <label for="endTime">End Time</label>
+            <input id="endTime" name="endTime" type="time" required>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Request</button>
+        <p id="bookingStatus" class="booking-status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>@2026 Michael Anthony Garza. CIS 2336 Project</p>
+    </div>
+  </footer>
+</body>
+</html>
